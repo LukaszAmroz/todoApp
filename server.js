@@ -17,7 +17,7 @@ todosRouter.route("/todos")
 		});
 	})
 	.post(function(req, res){
-		console.log("GET Request");
+		console.log("POST Request");
 		db.todos.insert(req.body, function(err, doc){
 			res.json(doc);
 		});
