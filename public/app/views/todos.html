@@ -1,0 +1,25 @@
+<h2>{{ globalValue.title }}</h2>
+
+<table class="table table-condensed">
+	<thead>
+		<tr>
+			<th>Zadanie</th>
+			<th>&nbsp</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="todo in todos">
+			<td>
+				<input type="checkbox" ng-model="check">
+				<span>{{ todo.text }}</span>
+			</td>
+			<td><button class="btn btn-danger btn-xs" ng-show="check" ng-click="remove(todo._id)"><span class="fa fa-times"></span></button></td>
+		</tr>
+	</tbody>
+</table>
+ 
+ <p id="total">Zadań do wykonania <span class="badge">{{ totalTodos() }}</span></p>
+
+	<hr>
+
+<addform></addform>
